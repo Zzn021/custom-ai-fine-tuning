@@ -2,5 +2,6 @@
 __pycache
 *_cache
 .coverage
+*.cfg
 lib
 bin
