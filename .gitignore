@@ -6,3 +6,4 @@ __pycache
 /lib
 /bin
 /include
+.env
