@@ -7,3 +7,4 @@ __pycache
 /bin
 /include
 .env
+report.txt
