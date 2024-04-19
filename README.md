@@ -23,5 +23,3 @@ Requirements:
 * To Fine-tune a model, you are required to provide at least 10 examples.We recommend starting with 50 well-crafted demonstrations.
 
 * The maximum file upload size is 1 GB.
-
----

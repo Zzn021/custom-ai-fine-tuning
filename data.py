@@ -9,9 +9,18 @@ def load_data(path: str):
         return [json.loads(line) for line in f]
     
 # Validates the dataset
-def validate(data: list[dict]) -> bool:
+def validate(file_path: str) -> bool:
+    # Load the file
+    data = load_data(file_path)
+    
+        
     ERROR = False
     report = []
+    
+    if len(data) < 10:
+        ERROR = True
+        report.append("* at least provide 10 examples")
+
     for line in data:
         # Check data type
         if not isinstance(line, dict):
@@ -54,7 +63,7 @@ def validate(data: list[dict]) -> bool:
         
     create_report(report) if ERROR else print('Dataset Validated')
             
-    return ERROR
+    return not ERROR
 
 # Creates a report
 def create_report(report: list[str]) -> None:
